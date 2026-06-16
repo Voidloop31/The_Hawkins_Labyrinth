@@ -1,0 +1,88 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#0a0a0a">
+
+    <!-- ══════════════════════════════ -->
+    <!--   TOP BAR — Health displays   -->
+    <!-- ══════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <!-- Player HP -->
+        <TextView
+            android:id="@+id/tvPlayerHealth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="❤️ HP: 150"
+            android:textColor="#ff4444"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <!-- Vecna HP -->
+        <TextView
+            android:id="@+id/tvVecnaHealth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="👁️ Vecna: 5"
+            android:textColor="#aa00ff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════ -->
+    <!--   THE 5x5 GAME GRID           -->
+    <!-- ══════════════════════════════ -->
+    <GridLayout
+        android:id="@+id/gameGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="5"
+        android:rowCount="5"
+        android:padding="4dp"/>
+
+    <!-- ══════════════════════════════ -->
+    <!--   DICE ROLL RESULT            -->
+    <!-- ══════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvDiceRoll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎲 Tap a neighboring block to move!"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:gravity="center"
+        tools:ignore="HardcodedText" />
+
+    <!-- ══════════════════════════════ -->
+    <!--   GAME MESSAGE (status)       -->
+    <!-- ══════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvGameMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ffdd57"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:minLines="2"/>
+
+</LinearLayout>
